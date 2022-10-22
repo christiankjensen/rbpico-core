@@ -1,8 +1,8 @@
 {
     "networks": [
         {
-            "ssid" : "wifijet",
-            "password": "asdf-4624"
+            "ssid" : "metwork name",
+            "password": "netwrok password"
         }
     ]
 }
