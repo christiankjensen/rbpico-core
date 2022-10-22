@@ -10,7 +10,7 @@ with open('net-cache.json') as f:
     data = ujson.load(f)
     netcache = data.get('networks')
     
-active_network = netcache[0]
+active_network = netcache[0] # change this as necessary if json file has multiple networks
 ssid = active_network.get('ssid','No ssid found')
 password = active_network.get('password','No password found')
 print('')
