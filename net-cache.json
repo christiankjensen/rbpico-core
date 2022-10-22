@@ -1,0 +1,8 @@
+{
+    "networks": [
+        {
+            "ssid" : "wifijet",
+            "password": "asdf-4624"
+        }
+    ]
+}
