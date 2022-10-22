@@ -39,12 +39,12 @@ def do_connect():
         ob_led.off()
 
 def print_connection():
-    if 'No ssid found' in name:
-        print('Not connected to wifi')
-    else:
+    if wifi.isconnected():
         print('Network:\t' + ssid)
         print('Configuration:\t', wifi.ifconfig())
         print('')
+    else:
+        print('Not connected to wifi')
 
 do_connect()
 print_connection()
