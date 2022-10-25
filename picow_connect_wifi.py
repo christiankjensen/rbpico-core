@@ -56,9 +56,7 @@ def do_connect():
         utime.sleep_ms(100)
 
 def do_disconnect():
-    if not wifi.isconnected():
-        print('Not connected to wifi')
-    else:       
+    if wifi.isconnected():
         start = utime.ticks_ms()
         utime.sleep_ms(10)
         print(f'Disconnecting from {ssid}...')
@@ -71,12 +69,12 @@ def do_disconnect():
             print(f'Elapse: {round(diff/1000, 2)} seconds\n')
         if wifi.isconnected():
             print('DisconnectError: Timeout (10s)\n')
-            return False
         else:
             wifi.active(False)
             print('Disconnected successfully.\n')
-            return True
-
+    else:       
+        print('Not connected to wifi')
+        
 def print_connection():
     if wifi.isconnected():
         print('----------------------------------------------------------------------------------')
