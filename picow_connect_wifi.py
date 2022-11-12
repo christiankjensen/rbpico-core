@@ -20,7 +20,7 @@ def do_connect():
     if not wifi.isconnected():
         start = utime.ticks_ms()
         utime.sleep_ms(10)
-        print('connecting to network ' + active_network['ssid'])
+        print('Connecting to network {active_network['ssid']}')
         ob_led.on()
         wifi.active(True)
         wifi.connect(ssid, password)
