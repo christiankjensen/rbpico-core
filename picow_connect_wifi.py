@@ -32,7 +32,7 @@ def do_connect():
             diff = now - start
             print(f'Elapse: {round(diff/1000, 2)} seconds\n')
         if wifi.isconnected():
-            print('Connected in {round(diff/1000, 2)} seconds\n')
+            print(f'Connected in {round(diff/1000, 2)} seconds\n')
             ob_led.off()
             utime.sleep_ms(100)
             ob_led.on() # 1
